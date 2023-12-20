@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto&display=swap');
+
+body {
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    grid-template-columns: repeat(4, 1fr);
+    background: #0f0f0f;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* background: red; */
+    margin-bottom: 2em;
+    color: white;
+}
+
+
+
+
+
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    bottom: 3px;
+    font-weight: 600;
+    right: 5px;
+    padding: .2rem .3rem;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.video-container:hover .thumbnail::before {
+
+    background-color: transparent;
+    color: transparent;
+    transition: .3s;
+}
+
+.thumbnail-image {
+    width: 100%;
+    border-radius: 10px;
+    /* height: 100%; */
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #AAA;
+}
+
+.video-container:hover .thumbnail-image {
+    border-radius: 0;
+    transition: .6s;
+}
+
+/* =================================
+ VIDEO BOTTOM  DETIALS SECTION
+ ==================================== */
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+    position: relative;
+
+}
+
+.channel-icon {
+    margin-right: .75rem;
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    background-color: #AAA;
+}
+
+.video-details {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.video-title {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #F1F1F1;
+    margin-bottom: 1em;
+    width: 100%;
+
+}
+
+.video-channel-name:hover>span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hover-channel-name {
+    position: absolute;
+    left: -4px;
+    top: -4.6em;
+    padding: .5em;
+    width: fit-content;
+    font-size: 12px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    background: #707070ce;
+    border-radius: 5px;
+    transition: .2s;
+
+}
+
+.name-section {
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    color: #aaaaaa;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: .4em;
+}
+
+.video-channel-name:hover {
+    color: white;
+}
+
+.name-section .svgg {
+    position: relative;
+    cursor: pointer;
+}
+
+.svgg:hover .verified {
+    visibility: visible;
+    opacity: 1;
+}
+
+.name-section svg {
+    transform: translateY(2.5px);
+    fill: #aaaaaa;
+}
+
+.fa-ellipsis-vertical {
+    padding: 1.1em .3em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    transform: translateX(-.1em);
+}
+
+.name-section .verified {
+    position: absolute;
+    top: -4.4em;
+    left: -2em;
+    background: #707070ce;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: .4em .8em;
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.video-details-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-bottom-section {
+    width: 100%;
+}
+
+.name-section a {
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.video-metadata {
+    font-size: 14px;
+    color: #aaaaaa;
+
+}
