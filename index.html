@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
     <main class="sticky">
         <nav>
             <div class="left">
-                <div class="menu-bars">
+                <div class="menu-bars" onclick="change();">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
                         style="pointer-events: none; display: block; width: 30px; ">
                         <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
@@ -64,7 +63,8 @@
             </div>
             <div class="middle">
                 <div class="search-container">
-                    <input type="text" placeholder="Search">
+                    <button class="x-button x-button-two" onclick="erase();">&times;</button>
+                    <input class="search-input" type="text" placeholder="Search" onkeyup="check();">
                     <div class="pop-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
                             viewBox="0 0 24 24" width="24" focusable="false"
@@ -74,6 +74,7 @@
                             </path>
                         </svg>
                     </div>
+
                     <div class="search-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
                             viewBox="0 0 24 24" width="24" focusable="false"
@@ -97,17 +98,18 @@
             </div>
             <div class="right">
                 <a class="right" href="#0">
-                    <div class="camera">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24"
-                            style="pointer-events: none; display: block; width: 30px; " viewBox="0 0 24 24" width="24"
+                    <div class="camera" onclick="fillChange();">
+                        <svg class="camera-svg" xmlns="http://www.w3.org/2000/svg" height="24"
+                            style="pointer-events: none;  width: 30px; " viewBox="0 0 24 24" width="24"
                             focusable="false">
                             <path
                                 d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z">
                             </path>
                         </svg>
-                        <div class="camera-two" style="width: 100%; height: 100%; fill: blue;"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"
-                                style="pointer-events: none; display: block; width: 25px;">
+                        <div onclick="fillChange();" class="camera-two" style="  position: relative; margin-top: -1px;
+
+                         fill: blue;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"
+                                style="pointer-events: none; display: block; width: 24px; transform: translateY(1px) translateX(1px);">
                                 <path d="M18,8.83V5H2v14h16v-5.83L22,15V7L18,8.83z M14,13h-3v3H9v-3H6v-2h3V8h2v3h3V13z">
                                 </path>
                             </svg>
@@ -161,7 +163,7 @@
         <aside class="aside-two">
             <nav class="second-nav">
                 <div class="left">
-                    <div class="menu-bars">
+                    <div class="menu-bars" onclick="change()">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
                             focusable="false" style="pointer-events: none; display: block; width: 30px; ">
                             <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
@@ -221,7 +223,7 @@
                                 <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
                             </g>
                         </svg>
-                        <p>Home</p>
+                        <p class="act">Home</p>
                     </div>
                     <div class="items" title="Shorts">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
@@ -532,7 +534,7 @@
                 <div class="home1">
                     <div class="hold" title="Home">
                         <div class="home-icon">
-                            <div style="width: 25px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
+                            <div style="width: 24px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
                                     enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"
                                     focusable="false"
                                     style="pointer-events: none; display: block; width: 100%; height: 100%;">
@@ -547,7 +549,7 @@
                 <div class="home1">
                     <div class="hold" title="Shorts">
                         <div class="home-icon">
-                            <div style="width: 25px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
+                            <div style="width: 24px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
                                     height="24" viewBox="0 0 24 24" width="24" focusable="false"
                                     style="pointer-events: none; display: block; width: 100%; height: 100%;">
                                     <path
@@ -561,7 +563,7 @@
                 <div class="home1">
                     <div class="hold" title="Subscriptions">
                         <div class="home-icon">
-                            <div style="width: 25px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
+                            <div style="width: 24px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
                                     enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"
                                     focusable="false"
                                     style="pointer-events: none; display: block; width: 100%; height: 100%;">
@@ -576,7 +578,7 @@
                 <div class="home1">
                     <div class="hold" title="You">
                         <div class="home-icon">
-                            <div style="width: 25px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
+                            <div style="width: 24px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
                                     enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"
                                     focusable="false"
                                     style="pointer-events: none; display: block; width: 100%; height: 100%;">
@@ -590,7 +592,7 @@
                 <div class="home1">
                     <div class="hold" title="Downloads">
                         <div class="home-icon">
-                            <div style="width: 25px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
+                            <div style="width: 24px; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg"
                                     height="24" viewBox="0 0 24 24" width="24" focusable="false"
                                     style="pointer-events: none; display: block; width: 100%; height: 100%;">
                                     <path
@@ -607,38 +609,40 @@
         </section>
         <section class="central">
             <section class="categories">
-                <div class="category-section">
+                <ul class="category-section">
 
-                    <button class="category active">All</button>
-                    <button class="category" title="Gaming"> Gaming</button>
-                    <button class="category" title="Live"> Live</button>
-                    <button class="category" title="Music"> Music</button>
-                    <button class="category" title="CSS"> CSS</button>
-                    <button class="category" title="C++"> C++</button>
-                    <button class="category" title="Mixes"> Mixes</button>
-                    <button class="category" title="Video edit"> Video edit</button>
-                    <button class="category" title="The Elder Scrolld V: Skyrim"> The Elder Scrolld V: Skyrim</button>
-                    <button class="category" title="Assasin's Creed"> Assasin's Creed</button>
-                    <button class="category" title="Superheroes"> Superheroes</button>
-                    <button class="category" title="Computers"> Computers</button>
-                    <button class="category" title="Trailers"> Trailers</button>
-                    <button class="category" title="Mobile Legends"> Mobile Legends</button>
-                    <button class="category" title="Comedy"> Comedy</button>
-                    <button class="category" title="Pop Music"> Pop Music</button>
-                    <button class="category" title="Recently Added"> Recently Added</button>
-                    <button class="category" title="New to you"> New to you</button>
-                    <button class="category" title="New to you"> New to you</button>
-                    <button class="category" title="New to you"> New to you</button>
-                    <button class="category" title="New to you"> New to you</button>
-                    <button class="category" id="last" title="New to you"> New to you</button>
+                    <li class="hover-cat  category active-cat">All</li>
+                    <li class="hover-cat  category"  title="Gaming"> Gaming</li>
+                    <li class="hover-cat  category" title="Live"> Live</li>
+                    <li class="hover-cat  category" title="Music"> Music</li>
+                    <li class="hover-cat  category" title="CSS"> CSS</li>
+                    <li class="hover-cat  category" title="C++"> C++</li>
+                    <li class="hover-cat  category" title="Mixes"> Mixes</li>
+                    <li class="hover-cat  category" title="Video edit"> Video edit</li>
+                    <li class="hover-cat  category" title="The Elder Scrolld V: Skyrim"> The Elder Scrolld V: Skyrim</li>
+                    <li class="hover-cat  category" title="Assasin's Creed"> Assasin's Creed</li>
+                    <li class="hover-cat  category" title="Superheroes"> Superheroes</li>
+                    <li class="hover-cat  category" title="Computers"> Computers</li>
+                    <li class="hover-cat  category" title="Trailers"> Trailers</li>
+                    <li class="hover-cat  category" title="Mobile Legends"> Mobile Legends</li>
+                    <li class="hover-cat  category" title="Comedy"> Comedy</li>
+                    <li class="hover-cat  category" title="Pop Music"> Pop Music</li>
+                    <li class="hover-cat  category" title="Recently Added"> Recently Added</li>
+                    <li class="hover-cat  category" title="New to you"> New to you</li>
 
-                    <div class="push">
-                        <a href="#last"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
+                    </ul>
+                    <div class="push display-arrow-right" >
+                        <button class="arrow-right" style="background: none; border: none;"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
                                 width="16" focusable="false" style="height: 16px;  margin-left: -.6rem;">
                                 <path d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"></path>
-                            </svg></a>
+                            </svg></a></button>
                     </div>
-                </div>
+                    <div class="push-two display-arrow-left" >
+                        <button class="arrow-left" style="background: none; border: none;"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
+                                width="16" focusable="false" style="height: 16px;  margin-left: -.6rem;">
+                                <path d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"></path>
+                            </svg></a></button>
+                    </div>
             </section>
         </section>
     </main>
@@ -681,7 +685,19 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="three-dot"><i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="menu-pop">
+                        <ul>
+                            <li><i></i>Add to queue</li>
+                            <li><i></i>Save to Watch later</li>
+                            <li><i></i>Save to playlist</li>
+                            <li><i></i>Share</li>
+                            <hr>
+                            <li><i></i>Not interested</li>
+                            <li><i></i>Don't recomend channel</li>
+                            <li><i></i>Report</li>
+                        </ul>
+                    </div></div>
                 </div>
             </article>
             <article class="video-container">
@@ -724,7 +740,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -766,7 +782,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -807,7 +823,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -848,7 +864,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -888,7 +904,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -928,7 +944,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -968,7 +984,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -1010,7 +1026,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -1025,7 +1041,8 @@
                         </a>
                         <div class="video-details">
                             <div class="video-title-section">
-                                <a href="#" class="video-title" title="Key & Peele-Obama Meet ">THE WATCHERS | EPISODE
+                                <a href="#" class="video-title" title="THE WATCHERS | EPISODE (ARRSONIST) ">THE WATCHERS
+                                    | EPISODE
                                     <br> (ARRSONIST)
                                 </a>
                             </div>
@@ -1050,7 +1067,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -1091,7 +1108,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
             <article class="video-container">
@@ -1106,7 +1123,7 @@
                         </a>
                         <div class="video-details">
                             <div class="video-title-section">
-                                <a href="#" class="video-title" title="Key & Peele-Obama Meet ">The Moist Machine
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
                                 </a>
                             </div>
                             <div class="name-section">
@@ -1131,12 +1148,132 @@
                             </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
                 </div>
             </article>
 
         </section>
-        <secton class="shorts-section">
+        <section class="shorts-section">
             <div class="shorts-head">
                 <div class="left-shorts">
                     <div class="shorts-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 24 24"
@@ -1155,9 +1292,110 @@
                 </div>
                 <div class="interest verified">Not Interested</div>
             </div>
-        </secton>
+            <div class="shorts-bottom-section overflow-shorts">
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contianer">
+                        <div class="container-top-section">
+                            <img src="/shorts-images/oar2.jpg" alt="">
+                        </div>
+                        <div class="bot-shorts">
+                            <div class="container-bottom-section">
+                                <div class="shorts-title">72-Doctor using curing baldness</div>
+                                <div class="shorts-meta-data">3.9M views</div>
+                            </div>
+                            <i id="Shorts-menu-icon" class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button class="show-more">Show more</button>
+        </section>
     </section>
-
+    <script src="/index.js"></script>
 </body>
 
 </html>
