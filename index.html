@@ -6,13 +6,14 @@
     <link rel="shortcut icon" type="x-con" href="/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/SCSS/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+  <div class="linee"></div>
     <main class="sticky">
         <nav>
             <div class="left">
@@ -216,9 +217,9 @@
 
             <section class="sidebar">
                 <div class="list">
-                    <div class="items active" title="Home">
+                    <div class="items  active" title="Home">
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                            viewBox="0 0 24 24" width="24" focusable="false" style="width: 25px;">
+                            viewBox="0 0 24 24" width="24" focusable="false"   style="width: 25px;">
                             <g>
                                 <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
                             </g>
@@ -226,12 +227,7 @@
                         <p class="act">Home</p>
                     </div>
                     <div class="items" title="Shorts">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
-                            focusable="false" style="width: 25px;">
-                            <path
-                                d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z">
-                            </path>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="transparent" stroke="white" focusable="false" style="pointer-events: none; display: block; width: 24px; height: 100%;"><path d="m17.77 10.32-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zM10 14.65v-5.3L15 12l-5 2.65z"></path></svg>
                         <p>Shorts</p>
                     </div>
                     <div class="items" title="Subscriptions">
@@ -606,7 +602,7 @@
             </section>
         </aside>
 
-        </section>
+        </section> 
         <section class="central">
             <section class="categories">
                 <ul class="category-section">
@@ -632,19 +628,24 @@
 
                     </ul>
                     <div class="push display-arrow-right" >
-                        <button class="arrow-right" style="background: none; border: none;"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
+                        <button class="arrow-right" style="background: none; border: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
                                 width="16" focusable="false" style="height: 16px;  margin-left: -.6rem;">
                                 <path d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"></path>
-                            </svg></a></button>
+                                <span>Next</span>
+                            </svg></button>
+                            
                     </div>
                     <div class="push-two display-arrow-left" >
                         <button class="arrow-left" style="background: none; border: none;"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16"
                                 width="16" focusable="false" style="height: 16px;  margin-left: -.6rem;">
                                 <path d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"></path>
-                            </svg></a></button>
+                                <span>Previous</span>
+                            </svg></button>
                     </div>
             </section>
-        </section>
+        </section> 
+    
     </main>
     <section class="central">
         <section class="video-section">
@@ -1273,6 +1274,7 @@
             </article>
 
         </section>
+        
         <section class="shorts-section">
             <div class="shorts-head">
                 <div class="left-shorts">
@@ -1290,7 +1292,7 @@
                 <div class="right-close">
                     <div class="right-shorts">&times;</div>
                 </div>
-                <div class="interest verified">Not Interested</div>
+                <div class="interest">Not Interested</div>
             </div>
             <div class="shorts-bottom-section overflow-shorts">
                 <article>
@@ -1392,7 +1394,635 @@
                     </div>
                 </article>
             </div>
-            <button class="show-more">Show more</button>
+            <button class="show-more"><p>Show more</p>
+                <i><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; fill:white; display: block; width: 24px; height: 100%;"><path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path></svg></i>
+            </button> 
+        </section>
+        <section class="video-section video-section-two">
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="2:02">
+                    <img class="thumbnail-image" src="/video-box-images/mrbean.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/mrbeansm.jpg" alt="" title="MelosQuest">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="Wednesday dances with Mr.Bean"> Wednesday dances
+                                    with Mr.Bean
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="MelosQuest">MelosQuest
+                                    <span class="hover-channel-name">MelosQuest</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>2.2M views</span>
+                                &#x2022;
+                                <span>10 months ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three-dot"><i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="menu-pop">
+                        <ul>
+                            <li><i></i>Add to queue</li>
+                            <li><i></i>Save to Watch later</li>
+                            <li><i></i>Save to playlist</li>
+                            <li><i></i>Share</li>
+                            <hr>
+                            <li><i></i>Not interested</li>
+                            <li><i></i>Don't recomend channel</li>
+                            <li><i></i>Report</li>
+                        </ul>
+                    </div></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="9:09">
+                    <img class="thumbnail-image" src="/video-box-images/immune.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/imunesm.jpg" alt=""
+                                title="Kurzgesagt - In a Nutshell">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="Your Tatto is INSIDE Your Immune System. Literally">Your Tatto is INSIDE Your
+                                    Immune System. Literally
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Kurzgesagt - In a Nutshell">Kurzgesagt -
+                                    In a Nutshell
+                                    <span class="hover-channel-name">Kurzgesagt - In a Nutshell</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>6.4M views</span>
+                                &#x2022;
+                                <span> 5 days ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="2:37">
+                    <img class="thumbnail-image" src="/video-box-images/longbeach.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/longbeachsm.jpg" alt=""
+                                title="LongBeachGriffy">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="How if feels telling a  girl how you like getting head"> How if feels telling
+                                    a girl how you like getting head
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="LongBeachGriffy">LongBeachGriffy
+                                    <span class="hover-channel-name">LongBeachGriffy</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>301K views</span>
+                                &#x2022;
+                                <span> 3 days ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="8:00">
+                    <img class="thumbnail-image" src="/video-box-images/speed.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/speedsm.jpg" alt="" title="LilSpeed">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="Speed Plays: Fear to Fathom (Ironbark Lookout)">Speed Plays: Fear to Fathom
+                                    <br>(Ironbark Lookout)
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="LilSpeed">LilSpeed
+                                    <span class="hover-channel-name">LilSpeed</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>71K views</span>
+                                &#x2022;
+                                <span> 1 month ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="13:14">
+                    <img class="thumbnail-image" src="/video-box-images/car.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/carsm.jpg" alt="" title="ORGCars">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="2024 Audi RS7 by MANSORY - Sound, Interior and Exterior">2024 Audi RS7 by
+                                    MANSORY - Sound, Interior and Exterior
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="ORGCars">ORGCars
+                                    <span class="hover-channel-name">ORGCars</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>580K views</span>
+                                &#x2022;
+                                <span> 3 months ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="12:00:00">
+                    <img class="thumbnail-image" src="/video-box-images/python.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/pythonsm.jpg" alt="" title="Bro Code">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="Python Full Course for free 🐍 "> Python Full
+                                    Course for free 🐍
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Bro Code">Bro Code
+                                    <span class="hover-channel-name">Bro Code</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>14M views</span>
+                                &#x2022;
+                                <span> 2 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="26:11">
+                    <img class="thumbnail-image" src="/video-box-images/win11.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/win11sm.jpg" alt="" title="VIN STAR">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="Windows 11 Mac Theme with Glass Effect"> Windows
+                                    11 Mac Theme with Glass Effect
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="VIN STAR">VIN STAR
+                                    <span class="hover-channel-name">VIN STAR</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>32K views</span>
+                                &#x2022;
+                                <span> 7 days ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="17:22">
+                    <img class="thumbnail-image" src="/video-box-images/police.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/policesm.jpg" alt="" title="DyingLiama">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="Police tried to track me down"> Police tried to
+                                    track me down
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="DyingLiama">DyingLiama
+                                    <span class="hover-channel-name">DyingLiama</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>615K views</span>
+                                &#x2022;
+                                <span> 4 weeks ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="14:53">
+                    <img class="thumbnail-image" src="/video-box-images/black hole.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/black holesm.jpg" alt=""
+                                title="ScienceClic English">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="What would you see if we fell into a Black Hole">What would you see if we
+                                    fell into a Black Hole
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="ScienceClic English">ScienceClic English
+                                    <span class="hover-channel-name">ScienceClic English</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>5.7M views</span>
+                                &#x2022;
+                                <span> 2 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="45:25">
+                    <img class="thumbnail-image" src="/video-box-images/watcher.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/watchersm.jpg" alt="" title="LT.LICKME">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="THE WATCHERS | EPISODE (ARRSONIST) ">THE WATCHERS
+                                    | EPISODE
+                                    <br> (ARRSONIST)
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="LT.LICKME">LT.LICKME
+                                    <span class="hover-channel-name">LT.LICKME</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>201K views</span>
+                                &#x2022;
+                                <span> 2 weeks ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="18:18">
+                    <img class="thumbnail-image" src="/video-box-images/asmrpro.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/asmrprosm.jpg" alt="" title="AsmrProg">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title"
+                                    title="ASMR Programming -Animated Login Page - No Talking"> ASMR Programming
+                                    -Animated Login Page - No Talking
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="AsmrProg">AsmrProg
+                                    <span class="hover-channel-name">AsmrProg</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <div class="verified">Verified</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>480K views</span>
+                                &#x2022;
+                                <span> 2 months ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+            <article class="video-container">
+                <a href="#" class="thumbnail" data-duration="6:55">
+                    <img class="thumbnail-image" src="/video-box-images/moist.webp" alt="">
+
+                </a>
+                <div class="video-details-section">
+                    <div class="video-bottom-section">
+                        <a class="bx" href="#">
+                            <img class="channel-icon" src="/video-box-images/moistsm.jpg" alt="" title="Joel Haver">
+                        </a>
+                        <div class="video-details">
+                            <div class="video-title-section">
+                                <a href="#" class="video-title" title="The Moist Machine">The Moist Machine
+                                </a>
+                            </div>
+                            <div class="name-section">
+                                <a href="#" class="video-channel-name" title="Joel Haver">Joel Haver
+                                    <span class="hover-channel-name">Joel Haver</span>
+                                </a>
+                                <div class="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                        viewBox="0 0 24 24" width="14" focusable="false">
+                                        <path
+                                            d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z">
+                                        </path>
+                                        <div class="verified official">Official Artist Channel</div>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="video-metadata">
+                                <span>4.9M views</span>
+                                &#x2022;
+                                <span> 1 years ago</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three-dot"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            </article>
+
         </section>
     </section>
     <script src="/index.js"></script>

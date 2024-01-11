@@ -75,11 +75,15 @@ const overflowShorts = document.querySelector('.overflow-shorts');
 function removeOverflow() {
   if (overflowShorts.classList.contains('overflow-shorts')) {
     overflowShorts.classList.remove('overflow-shorts');
-    text.innerHTML = 'Show less';
+    text.innerHTML = `<p>Show less</p>
+    <i><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; fill:white; display: block; width: 24px; transform:rotatex(180deg); height: 100%;"><path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path></svg></i>
+`;
     return;
   } else if (!overflowShorts.classList.contains('overflow-shorts')) {
     overflowShorts.classList.add('overflow-shorts');
-    text.innerHTML = 'Show more';
+    text.innerHTML = `<p>Show more</p>
+    <i><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; fill:white;  display: block; width: 24px; height: 100%;"><path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path></svg></i>
+`;
 
   }
 
@@ -91,26 +95,26 @@ function removeOverflow() {
 const arrowLeft = document.querySelector('.display-arrow-left');
 const arrowRight = document.querySelector('.display-arrow-right');
 const push = document.querySelector('.push');
-const scrollx = document.querySelector('.category-section');
+let scrolling = document.querySelector('.category-section');
+
 document.querySelector('.arrow-right')
   .addEventListener('click', () => {
-    scrollx.scrollLeft += 700;
-    // scrollx.scrollwidth=2087;
+    // scrolling.scrollwidth=2087;
 
-    if (scrollx.scrollWidth > 20) {
-      arrowLeft.classList.remove('display-arrow-left')
-    }
 
-    if (scrollx.scrollWidth = 2106) {
+    scrolling.scrollLeft += 100;
+
+    if (scrolling.scrollLeft === 600) {
       push.classList.add('displayx');
+    }
+    if (scrolling.scrollWidth > 20) {
+      arrowLeft.classList.remove('display-arrow-left')
     }
 
   })
 
 if (arrowRight.classList.contains('display-arrow-right')) {
   arrowRight.classList.remove('display-arrow-right')
-} else {
-
 }
 
 
@@ -119,11 +123,10 @@ document.querySelector('.arrow-left')
 
     push.classList.remove('display-arrow-right');
     push.classList.remove('displayx')
-    scrollx.scrollLeft -= 700;
-    if (2 < 5) {
+    scrolling.scrollLeft -= 100;
+    if (scrolling.scrollLeft === 8) {
       arrowLeft.classList.add('display-arrow-left');
     }
-    console.log(push)
   })
 
 
@@ -149,3 +152,65 @@ categories.forEach(tab => {
 });
 
 
+
+const line = document.querySelector('.linee'),
+  videoContainer = document.querySelectorAll('.thumbnail');
+
+
+let interval;
+videoContainer.forEach(video => {
+
+
+  video.addEventListener('click', () => {
+
+    line.style.width = '100%';
+    interval = setInterval(() => {
+
+      if (line.style.width === '100%') {
+        line.style.width = '0%'
+        line.style.transition = 'none'
+      }
+      else if (!line.style.width === '100%') {
+        line.style.transition = '2s ease-in';
+
+      }
+    }, 2100);
+  })
+})
+
+
+
+const items = document.querySelectorAll('.items'),
+  itemsSvg = document.querySelectorAll('.items svg');
+
+
+
+
+function removeActive() {
+  items.forEach(item => {
+    item.classList.remove('active');
+  })
+}
+
+
+// function fill() {
+//   itemsSvg.forEach(svg => {
+
+//     if (svg.getAttribute('fill') === ('transparent')) {
+//       svg.setAttribute('fill', 'white');
+
+//     } else {
+//       svg.setAttribute('fill', 'transparent');
+//       svg.setAttribute('stroke', '#d8d4d4');
+
+//     }
+//   });
+// }
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    removeActive();
+    item.classList.add('active');
+  })
+
+});
